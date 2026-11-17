@@ -12,9 +12,9 @@
  * Expected configuration:
  *
  * $github_updater_config = [
- *     'username'    => 'github-username',
- *     'repository'  => 'github-repository',
- *     'plugin_file' => plugin_basename(__FILE__),
+ *     'username'     => 'github-username',
+ *     'repository'   => 'github-repository',
+ *     'plugin_file'  => __FILE__,
  *     'access_token' => null, // Optional GitHub personal access token.
  * ];
  *
@@ -53,7 +53,7 @@ $updaterClassFile = __DIR__ . '/Updater.php';
 if (!class_exists(\Skyrocket\GitHubUpdater\Updater::class)) {
 
     // Skip initialisation if the updater class file is unavailable.
-    if (!file_exists($updaterClassFile)) {
+    if (!is_file($updaterClassFile)) {
         return;
     }
 
