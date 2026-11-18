@@ -23,3 +23,6 @@
 ## 1.0.5 - Change plugin and repository name
 - Now using "lavamitts/skyrocket-plugin-updater" instead of "lavamitts/github-plugin-updater".
 - Build tooling adjusted to NOT include the composer and autoload files in the distribution.
+
+## 1.0.6 - Remove node.js tools if they exist in the distribution ZIP
+- Removes package.json and package-lock.json from the distribution set.

@@ -208,6 +208,12 @@ rm -rf "${STAGING_DIR}/tools"
 rm -rf "${STAGING_DIR}/.github"
 rm -f "${STAGING_DIR}/.gitignore"
 
+# Remove Node.js package metadata from the plugin root.
+echo "Removing Node.js package files..."
+
+rm -f "${STAGING_DIR}/package.json"
+rm -f "${STAGING_DIR}/package-lock.json"
+
 echo
 
 # --------------------------------------------------
